@@ -1,0 +1,43 @@
+{
+  "name": "vite-5-uistart",
+  "keywords": [],
+  "author": "Vladlen Schetinin",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^20.12.7",
+    "@vheemstra/vite-plugin-imagemin": "^2.0.0",
+    "autoprefixer": "^10.4.19",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "path": "^0.12.7",
+    "postcss": "^8.4.38",
+    "sass": "^1.75.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-purge": "^1.0.3",
+    "vituum": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

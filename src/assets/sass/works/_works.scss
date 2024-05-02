@@ -1,0 +1,39 @@
+.wrapper{
+  padding: 50px 0;
+}
+
+.entryway-menu{
+  li+li{
+    margin-top: 1rem;
+  }
+}
+
+.linkwrap{
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  padding-left: 50px;
+}
+
+.entryway-menu,
+.linkwrap{
+  a{
+    transition: all .25s ease;
+    &:hover{
+      color: #f00;
+    }
+  }
+}
+
+code.exsemple{
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.task-item{
+  &+.task-item{
+    margin-top: 2rem;
+  }
+}
