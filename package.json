@@ -1,5 +1,5 @@
 {
-  "name": "vite-5-uistart",
+  "name": "js-practic",
   "keywords": [],
   "author": "Vladlen Schetinin",
   "license": "MIT",
@@ -34,10 +34,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-checker": "^0.6.4",
-    "vite-plugin-purge": "^1.0.3",
-    "vituum": "^1.1.0"
+    "vite-plugin-purge": "^1.0.3"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "scss-reset": "^1.4.2"
   }
 }
