@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// @type List
+$text-font-stack: "Roboto", sans-serif !default;
+
+$base-font-size: 16px !default;
+
+$base-line-height: 1.45 !default;
+
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+$brand: #df4f4f !default;
+
+$text-color: (
+  "white": #fff,
+  "dark": #111,
+  "accent": $brand,
+  "error": #f00,
+) !default;
+
+$theme-color: (
+  "primary": #fff,
+  "brand": $brand,
+  "brand-hover": darken($brand, 10%),
+  "brand-active": darken($brand, 20%),
+) !default;

@@ -1,0 +1,77 @@
+// Media Scrin Max-width
+@mixin media($max-width) {
+  $screen-width: str-replace($max-width + '', 'px');
+  @media screen and (max-width: #{$screen-width}px) {
+    @content;
+  }
+}
+// Media Scrin Min-width
+@mixin minMedia($min-width) {
+  $screen-width: str-replace($min-width + '', 'px');
+  @media screen and (min-width: #{$screen-width}px) {
+    @content;
+  }
+}
+
+// Этот миксин позволяет легко и единообразно стилизовать текст плейсхолдера во всех браузерах
+@mixin placeholderColor($color) {
+  ::-webkit-input-placeholder {color: $color;}
+  ::-moz-placeholder {color: $color;}
+  :-moz-placeholder {color: $color;}
+  :-ms-input-placeholder {color: $color;}
+}
+
+// Задать размер квадратного элемента
+@mixin square($size: 1em) {
+  width: $size;
+  height: $size;
+}
+
+// Позволяет динамически генерировать CSS-стили на основе предоставленной карты классов
+@mixin generate_styles($styles) {
+  @each $class_name, $style_names in $styles {
+    #{$class_name} {
+      @each $style_name, $style_value in $style_names {
+        #{$style_name}: #{$style_value};
+      }
+    }
+  }
+  @each $bp, $val in $grid-breakpoints {
+    @if $bp !='xs' {
+      @each $class_name, $style_names in $styles {
+        #{$class_name}--#{$bp} {
+          @include minMedia($val) {
+            @each $style_name, $style_value in $style_names {
+              #{$style_name}: #{$style_value};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Функция для генерации адаптивного контента на основе наборов точек останова 
+@mixin generate_bp_content() {
+  @content;
+  @each $bp, $val in $grid-breakpoints {
+    @if $bp !='xs' {
+      &--#{$bp} {
+        @include minMedia($val) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+// Функция для определения и подключения шрифтов к проекту, путем генерации правила @font-face CSS
+@mixin font-face($font-family, $url, $format, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}') format("#{$format}");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}

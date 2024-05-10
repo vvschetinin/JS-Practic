@@ -18,22 +18,11 @@
 .entryway-menu,
 .linkwrap{
   a{
+    color: #111;
     transition: all .25s ease;
+    text-decoration: none;
     &:hover{
       color: #f00;
     }
-  }
-}
-
-code.exsemple{
-  display: inline-block;
-  padding-top: 20px;
-  font-size: 16px;
-  line-height: 1.75;
-}
-
-.task-item{
-  &+.task-item{
-    margin-top: 2rem;
   }
 }

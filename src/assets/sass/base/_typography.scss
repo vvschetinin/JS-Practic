@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+  @include minMedia(576) {
+    font-size: $base-font-size;
+  }
+}
+
+body, p {
+  font-family: $text-font-stack;
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: theme_text_color("dark");
+}
+
+@include placeholderColor(inherit);
+
+.input-error,
+.form-error {
+  color: theme_text_color("error");
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto";
+  font-weight: 600;
+  color: theme_text_color("dark");
+  line-height: 1.2;
+  margin-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+p{
+  height: auto;
+  &+p {
+    margin-top: .5rem;
+    @include minMedia(768) {
+      margin-top: .7rem;
+    }
+  }
+  @media (max-height: 450px) and (orientation: landscape) {
+    font-size: 16px;
+  }
+}
+
+@import "fonts";
+@import "titles";
