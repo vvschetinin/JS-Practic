@@ -38,4 +38,22 @@
     padding-bottom: 1rem;
     color: #0078D7;
   }
+  .reference{
+    padding-top: 1rem;
+    li+li{
+      margin-top: .35rem;
+    }
+    a{
+      text-decoration: none;
+      font-weight: 600;
+      color: #0078D7;
+      display: inline-block;
+      padding-right: 1rem;
+      transition: all .2s ease;
+      &:hover{
+        color: #f00;
+      }
+    }
+  }
+
 }

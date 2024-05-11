@@ -22,15 +22,54 @@
           <h2>Code</h2>
           <pre>
             <code>
-              
+              const numberList = [3,7,23,12,9,5,3,4,8,11];
+              let count = 0;
+
+              function LinearSearch(numberList, item) {
+                for (let i = 0; i 'less' numberList.length; i++) {
+                  count += 1;
+                  if(numberList[i] === item) {
+                    return i;
+                  }
+                }
+                return 'Item not found';
+              }
+
+              console.log(LinearSearch(numberList, 12));
+              console.log('count = ', count);
             </code>
           </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <ul class="reference">
+            <li><a href="https://learn.javascript.ru/" target="_blank">Современный учебник JavaScript</a>Использовать как справочное пособие</li>
+            <li><a href="https://clck.ru/3AZhjm" target="_blank">length</a>Свойство, которое возвращает количество элементов в массиве</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <script></script>
+  <script>
+    const numberList = [3,7,23,12,9,5,3,4,8,11];
+    let count = 0;
+
+    function LinearSearch(numberList, item) {
+      for (let i = 0; i < numberList.length; i++) {
+        count += 1;
+        if(numberList[i] === item) {
+          return i;
+        }
+      }
+      return 'Item not found';
+    }
+
+    console.log(LinearSearch(numberList, 12));
+    console.log('count = ', count);
+    
+  </script>
 
   <script type="module" src="/src/main.ts"></script>
 </body>
